@@ -74,31 +74,6 @@ Clique em **Executar**.
 
 ---
 
-## 🔗 Conexão com o Banco de Dados
-
-Certifique-se de que seu arquivo `conexao.php` contenha o seguinte:
-
-```php
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "clone";
-
-// Criar conexão
-$conn = new mysqli($servername, $username, $password, $database);
-
-// Verificar conexão
-if ($conn->connect_error) {
-  die("Conexão falhou: " . $conn->connect_error);
-}
-?>
-```
-
-> ⚠️ No XAMPP, o usuário padrão é `root` e a senha geralmente é vazia (`""`).
-
----
-
 ## 🌐 Acessar o Projeto
 
 Após configurar tudo, acesse via navegador:
