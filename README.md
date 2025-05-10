@@ -59,7 +59,7 @@ No menu superior, clique em **SQL** e cole o seguinte comando:
   CREATE DATABASE IF NOT EXISTS clone;
   USE clone;
 
-  CREATE TABLE usuarios (
+  CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,

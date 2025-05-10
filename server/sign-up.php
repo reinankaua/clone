@@ -20,14 +20,14 @@ try {
         throw new Exception('Dados inválidos.');
     }
 
-    $stmt = $pdo->prepare("SELECT id FROM usuarios WHERE email = ?");
+    $stmt = $pdo->prepare("SELECT id FROM users WHERE email = ?");
     $stmt->execute([$email]);
 
     if ($stmt->fetch()) {
         throw new Exception('E-mail já cadastrado.');
     }
 
-    $stmt = $pdo->prepare("INSERT INTO usuarios (name, email, password) VALUES (?, ?, ?)");
+    $stmt = $pdo->prepare("INSERT INTO users (name, email, password) VALUES (?, ?, ?)");
     $stmt->execute([$name, $email, $password]);
 
     $response = ['success' => true, 'message' => 'Conta criada com sucesso!'];

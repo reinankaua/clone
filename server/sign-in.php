@@ -17,7 +17,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL) || strlen($password) < 8) {
     exit;
 }
 
-$stmt = $pdo->prepare("SELECT id, name, password FROM usuarios WHERE email = ?");
+$stmt = $pdo->prepare("SELECT id, name, password FROM users WHERE email = ?");
 $stmt->execute([$email]);
 $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
