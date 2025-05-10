@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost';
-$db   = 'projeto_crud';
+$db   = 'clone';
 $user = 'root';
 $pass = '';
 
